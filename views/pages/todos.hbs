@@ -1,0 +1,95 @@
+{{#if Data.Task}}
+<section class="">
+  <div class="row1">
+    <div class="book">
+      <div class="book__form">
+        <form action="/add" method="POST">
+          <div class="u-margin-bottom-medium">
+            <h2 class="heading-secondary">
+              Assign a new task
+            </h2>
+          </div>
+          <div class="form__group ">
+            <select id="inputState" class="form__input" name="task_name">
+              {{#each Data.Task}}
+              <option value="{{task_name}}">{{task_name}}</option>
+              {{/each}}
+            </select>
+          </div>
+
+          <div class="form__group ">
+            <select id="inputState" class="form__input" name="assign_member">
+              {{#each Data.Family}}
+              <option value="{{name}}">{{name}}</option>
+              {{/each}}
+            </select>
+          </div>
+
+          <div class="form__group">
+            <input type="date" class="form__input" name="date_todo" required>
+          </div>
+          <div class="form__group">
+            <input type="time" class="form__input" name="time_todo" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn--green btn-block">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{{else}}
+<section class="">
+  <div class="row1">
+    <div class="book">
+      <div class="book__form">
+        <div class="u-margin-bottom-medium">
+          <div class="form__group ">
+            <a class="btn btn--orange btn-block" href="/Tasks">Add a task</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/if}}
+
+<section class="section-task">
+  <div class="container">
+    <div class="row">
+
+      {{#each Data.ToDos}}
+      {{#each this}}
+
+
+      <div class="col-md-4">
+        <div class="card1 text-center">
+          <div class="card1__side">
+            <div class="card1__picture card1__picture--2">
+              &nbsp;
+              <!--Empty space html-->
+            </div>
+            <h4 class="card1__heading">
+              <span class="card1__heading-span card1__heading-span--2">{{name}}</span>
+            </h4>
+            <div class="card1__details">
+              <ul>
+                <li>Assign to: {{assign_member}}</li>
+                <li>Date to do: {{date_todo}}</li>
+                <li>Time to do: {{time_todo}}</li>
+                <li>Created : {{timeago createdAt}}</li>
+              </ul>
+              <a href="/delete/{{id}}" class="btn btn-primary">Done</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{/each}}
+
+      {{/each}}
+
+    </div>
+  </div>
+</section>

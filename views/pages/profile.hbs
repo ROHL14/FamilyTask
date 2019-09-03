@@ -1,0 +1,33 @@
+<section class="section-profile">
+  <div class="profile">
+    <div class="row1">
+      <div class="card1">
+        <div class="card1__side">
+          <div class="card1__picture card1__picture--1">
+            &nbsp;
+            <!--Empty space html-->
+          </div>
+          <h4 class="card1__heading">
+            <span class="card1__heading-span card1__heading-span--1">{{user.name}}</span>
+          </h4>
+          <div class="card1__details">
+            <ul>
+              <li>Email: {{user.email}}</li>
+              <li>Role: {{user.role}}</li>
+              {{#if user.admin}}
+              <li>Admin: yes</li>
+              {{/if}}
+            </ul>
+
+            <div>
+              <a class="btn btn--orange" href="/tasks">Add a task</a>
+              <a class="btn btn--orange" href="/edit/{{user.id}}">Edit</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

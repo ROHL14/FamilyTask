@@ -1,0 +1,48 @@
+<section class="">
+  <div class="row1">
+    <div class="book">
+      <div class="book__form">
+        <form action="/addTask" method="POST">
+          <div class="u-margin-bottom-medium">
+            <h2 class="heading-secondary">
+              Add a Task
+            </h2>
+          </div>
+          <div class="form__group">
+            <input type="text" class="form__input" placeholder="Task name" name="task_name" id="task_name" required />
+            <label for="name" class="form__label">Task name</label>
+          </div>
+
+          <div class="form__group">
+            <button class="btn btn--green btn-block">Add &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{#if Task}}
+<div class="section-task">
+  <div class="row1">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Task name</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each Task}}
+        <tr>
+          <th scope="row">{{id}}</th>
+          <td>{{task_name}}</td>
+          <td><a href="/deleteTask/{{id}}"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+{{/if}}

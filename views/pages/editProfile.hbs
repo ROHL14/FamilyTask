@@ -1,0 +1,33 @@
+<div class="row1">
+  <div class="book">
+    <div class="book__form">
+      <form action="/save/{{data.id}}" method="POST">
+        <div class="u-margin-bottom-medium">
+          <h2 class="heading-secondary">
+            Edit Profile
+          </h2>
+        </div>
+
+        <div class="form__group">
+          <input type="text" class="form__input" placeholder="{{data.name}}" name="name" id="name" required />
+          <label for="name" class="form__label">Full name</label>
+        </div>
+
+
+
+        <div class="form__group ">
+          <select id="inputState" class="form__input" name="role">
+            <option value="Father">Father</option>
+            <option value="Mother">Mother</option>
+            <option value="Son">Son</option>
+            <option value="Daugther">Daugther</option>
+          </select>
+        </div>
+
+        <div class="form__group">
+          <button class="btn btn--green">Save &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

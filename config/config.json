@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "RootFamilyTask",
+    "password": "!4RootFamilyTask!4",
+    "database": "familytask_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 3306,
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "pm0p1k0zlu5jdok7",
+    "password": "z0r915b0ba1w1dz0",
+    "database": "k5xxo54nyn3onxy1",
+    "host": "x3ztd854gaa7on6s.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "use_env_variable": "JAWSDB_URL",
+    "operatorsAliases": false
+  }
+}

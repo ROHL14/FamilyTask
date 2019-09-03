@@ -1,0 +1,38 @@
+<section class="section-task">
+  <div class="container">
+    <div class="row">
+
+      {{#each Tasks}}
+      {{#each this}}
+
+
+      <div class="col-md-4">
+        <div class="card1 text-center">
+          <div class="card1__side">
+            <div class="card1__picture card1__picture--3">
+              &nbsp;
+              <!--Empty space html-->
+            </div>
+            <h4 class="card1__heading">
+              <span class="card1__heading-span card1__heading-span--3">{{name}}</span>
+            </h4>
+            <div class="card1__details">
+              <ul>
+                <li>Assign to: {{assign_member}}</li>
+                <li>Date to do: {{date_todo}}</li>
+                <li>Time to do: {{time_todo}}</li>
+                <li>Created : {{timeago createdAt}}</li>
+              </ul>
+              <a href="/delete/{{id}}" class="btn btn-primary">Done</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{/each}}
+
+      {{/each}}
+
+    </div>
+  </div>
+</section>

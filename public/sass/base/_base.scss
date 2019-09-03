@@ -1,0 +1,19 @@
+*,
+*::before, // It is better to add the pseudo-elements to get the behavior tha we are changing here in our global reset
+*::after {
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box; this is bad practice
+
+  box-sizing: inherit; // inherited, and is a better practice doing it in this way
+}
+
+html {
+  // font-size: 10px; is no good use px because the user it can't use the zoom because our font-size is stuck in 10px
+  // this defines what 1rem is
+  font-size: 62.5%; // 16px/10px
+}
+
+body {
+  box-sizing: border-box; // inherited, and is a better practice doing it in this way
+}

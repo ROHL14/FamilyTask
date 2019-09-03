@@ -1,0 +1,88 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+
+.section-features {
+  margin-top: -12vh;
+  padding: 20rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)
+  );
+  background-size: cover;
+
+  transform: skewY(-7deg);
+
+  //Selector to use for the direct childs
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.section-tours {
+  margin-top: -12vh;
+  background-color: $color-grey-light-1;
+  padding: 25rem 0 15rem 0;
+}
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0;
+}
+
+.section-book {
+  padding: 1rem 0;
+  /*background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );*/
+
+  .book {
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.7) 0%,
+        rgba($color-white, 0.7) 50%,
+        transparent 50%
+      ),
+      url("../img/signup.jpg");
+    background-size: 100%; //This 100% do the same function as cover
+    border-radius: $default-border-radius;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+    height: 75rem;
+
+    &__form {
+      width: 50%;
+      padding: 6rem;
+    }
+  }
+}
+
+.section-profile {
+  position: relative;
+  padding: 13.5rem 0;
+
+  .profile {
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}
+
+.section-family {
+  position: relative;
+  padding: 13.5rem 0;
+  overflow-x: hidden;
+}
+
+.section-task {
+  position: relative;
+  padding: 13.5rem 0;
+}
